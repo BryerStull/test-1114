@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Delete an entry
         $delete_id = (int) $_POST['delete_id'];
         
-        $delete_sql = 'DELETE FROM jokes WHERE id = :id';
+        $delete_sql = 'DELETE FROM jokes WHERE joke_id = :id';
         $stmt_delete = $pdo->prepare($delete_sql);
         $stmt_delete->execute(['id' => $delete_id]);
     }
