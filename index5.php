@@ -97,7 +97,7 @@ $stmt = $pdo->query($sql);
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Book ID</th>
+                                    <th>Joke ID</th>
                                     <th>Joke</th>
                                     <th>Is it Good?</th>
                                     <th>Setup</th>
@@ -107,14 +107,14 @@ $stmt = $pdo->query($sql);
                             <tbody>
                                 <?php foreach ($search_results as $row): ?>
                                 <tr>
-                                    <td><?php echo htmlspecialchars($row['book_id']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['jokes']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['joke_id']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['joke']); ?></td>
                                     <td><?php echo htmlspecialchars($row['Is_it_good']); ?></td>
                                     <td><?php echo htmlspecialchars($row['setup']); ?></td>
                                     <td><?php echo htmlspecialchars($row['punchline']); ?></td>
                                     <td>
                                         <form action="index5.php" method="post" style="display:inline;">
-                                            <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
+                                            <input type="hidden" name="delete_id" value="<?php echo $row['joke_id']; ?>">
                                             <input type="submit" value="Nobody Laughed">
                                         </form>
                                     </td>
