@@ -153,7 +153,7 @@ $stmt = $pdo->query($sql);
                     <td><?php echo htmlspecialchars($row['punchline']); ?></td>
                     <td>
                         <form action="index5.php" method="post" style="display:inline;">
-                            <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
+                            <input type="hidden" name="delete_id" value="<?php echo $row['joke_id']; ?>">
                             <input type="submit" value="Nobody Laughed">
                         </form>
                     </td>
@@ -176,6 +176,8 @@ $stmt = $pdo->query($sql);
             <label for="setup">Setup:</label>
             <input type="text" id="setup" name="setup" required>
             <br><br>
+            <label for="punchline">Punchline:</label>
+            <input type="text" id="punchline" name="punchline" required>
             <input type="submit" value="add joke">
         </form>
     </div>
